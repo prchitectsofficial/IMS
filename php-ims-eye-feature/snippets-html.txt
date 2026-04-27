@@ -1,0 +1,26 @@
+=== COPY 1: TAGS column cell (inside influencer <tr>) ===
+
+<td>
+  <div class="niches">NICHES_PLACEHOLDER</div>
+  <button type="button"
+          class="btn btn-success btn-small"
+          onclick="show_stats('TAG_STRING', RECORD_ID);"
+          title="Show similar channels">
+    <img src="/images/show_similar.png" width="28" alt="Similar">
+  </button>
+</td>
+
+
+=== COPY 2: Hidden expandable row (immediately after influencer </tr>) ===
+
+<tr class="collapse" id="collapse_RECORDID" style="display: none;">
+  <td colspan="100%">
+    <table id="show_similar_RECORDID" class="table table-bordered table-sm"></table>
+  </td>
+</tr>
+
+
+Replace:
+  NICHES_PLACEHOLDER = your niches display text
+  TAG_STRING        = comma separated tags for AJAX (e.g. "Tech,Gaming")
+  RECORD_ID         = influencer id number (no quotes in onclick)
